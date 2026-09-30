@@ -3,6 +3,3 @@ node_modules/
 dist/
 .dev.vars
 .DS_Store
-
-# Generated Cloudflare type declarations
-worker-configuration.d.ts
