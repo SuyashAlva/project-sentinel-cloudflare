@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+dist/
+.dev.vars
+.DS_Store
+
+# Generated Cloudflare type declarations
+worker-configuration.d.ts

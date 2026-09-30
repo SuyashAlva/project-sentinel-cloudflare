@@ -1,0 +1,2 @@
+# Workers AI is configured as a native binding in wrangler.jsonc.
+# No API key is needed for the hosted Cloudflare Workers AI binding.

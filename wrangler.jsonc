@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "project-sentinel",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-29",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "ai": { "binding": "AI" },
+  "durable_objects": {
+    "bindings": [{ "name": "SENTINEL_STORE", "class_name": "SentinelStore" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["SentinelStore"] }],
+  "workflows": [{ "name": "risk-analysis", "binding": "RISK_ANALYSIS", "class_name": "RiskAnalysisWorkflow" }]
+}
